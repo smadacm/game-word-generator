@@ -2,13 +2,15 @@ body > .container {
     margin-top: 50px;
 }
 
-.word, .timer {
+.category, .word, .timer {
+    margin: 0.25em;
     font-size: 3em;
-    margin: 1em;
+}
+
+.word, .timer {
     border: solid 2px #333;
     background: #ddd;
     text-align: center;
-    margin: 0.25em;
 }
 
 .timer.expired {

@@ -3,3 +3,5 @@
 gamegen.db3
 __pycache__
 venv
+data/charades/
+data/pictionary/

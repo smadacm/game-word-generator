@@ -10,9 +10,9 @@
         <meta name="author" content="" />
 
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <link rel="stylesheet" href="{% static "third-party/bootstrap/css/bootstrap.css" %}" />
         <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+        <link rel="stylesheet" href="{% static "third-party/bootstrap/css/bootstrap-theme.css" %}" />
         <link rel="stylesheet" href="{% static "css/main.css" %}" />
 
         <title>{% block title %}Word Generator{% endblock %}</title>
@@ -56,6 +56,18 @@
 
         <div class="starter-template">
             <h1>{% block h1 %}Word Generator{% endblock %}</h1>
+            <div class="category">
+                <span class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        {% block category-name %}{% endblock %}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="category-menu">
+                        {% block categories %}{% endblock %}
+                    </ul>
+                </span>
+                <button class="btn btn-primary" onclick="location.reload()">New Word</button>
+            </div>
             <div class="word">{% block word %}{% endblock %}</div>
             <div class="timer"></div>
         </div>
@@ -69,8 +81,10 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="{% static "third-party/bootstrap/js/bootstrap.min.js" %}"></script>
 
         <script src="{% static "js/timer.js" %}"></script>
+        <script src="{% static "third-party/aria/js/ariatemplates-1.8.3.js" %}"></script>
+        <script src="{% static "third-party/aria/css/atskin-1.8.3.js" %}"></script>
     </body>
 </html>
