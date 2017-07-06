@@ -1,0 +1,5 @@
+*.pyc
+.idea/
+gamegen.db3
+__pycache__
+venv

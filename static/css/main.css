@@ -1,0 +1,16 @@
+body > .container {
+    margin-top: 50px;
+}
+
+.word, .timer {
+    font-size: 3em;
+    margin: 1em;
+    border: solid 2px #333;
+    background: #ddd;
+    text-align: center;
+    margin: 0.25em;
+}
+
+.timer.expired {
+    color: #900;
+}
