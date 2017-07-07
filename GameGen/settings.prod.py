@@ -23,11 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b3s5h$_)c_=svawt5qu+%+#_=b)!fm7y=%e!q5@!9!0(zq+gy!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    '10.0.0.120',
+    'game.adamstechnologysolutions.com',
 ]
 
 
