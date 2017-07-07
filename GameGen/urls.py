@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from Charades import urls as curls
-# from Pictionary import urls as purls
+from Render import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^charades/', include('Charades.urls')),
-    # url(r'^pictionary/', purls.urlpatterns),
+    url(r'^pictionary/', include('Pictionary.urls')),
+    url(r'^$', views.Index.as_view(), name='index'),
+    url(r'^index.(html|htm|php)$', views.Index.as_view(), name='index-alt'),
 ]

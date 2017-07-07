@@ -1,0 +1,10 @@
+{% extends "global/root.html" %}
+{% load static %}
+
+{% block content %}
+    <ul>
+        <li><a href="{% url "charades.index" %}">Charades</a></li>
+        <li><a href="{% url "pictionary.index" %}">Pictionary</a></li>
+    </ul>
+{% endblock %}
+

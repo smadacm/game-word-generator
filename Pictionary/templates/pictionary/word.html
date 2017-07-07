@@ -1,0 +1,12 @@
+{% extends "render/word.html" %}
+
+{% block category-name %}{{ current_category.name }}{% endblock %}
+{% block categories %}
+    {% for category in categories %}
+        <li {% if category.id == category_id %}class="active"{% endif %}>
+            <a href="{% url 'pictionary.word' category_id=category.id %}">{{ category.name }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}
+{% block word %}{{ word }}{% endblock %}
+{% block h1 %}Pictionary Word Generator{% endblock %}

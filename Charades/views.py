@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django import views
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, RedirectView
 from Charades import models
 
 # Create your views here.
@@ -22,3 +22,7 @@ class Word(TemplateView):
         context['current_category'] = current_category
 
         return context
+
+class Index(RedirectView):
+    permanent = True
+    pattern_name = "charades.word"

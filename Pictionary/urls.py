@@ -14,9 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from Charades import views
+from Pictionary import views
 
 urlpatterns = [
-    url(r'^word/(?P<category_id>\d+)?/?', views.Word.as_view(), name='charades.word'),
-    url(r'^$', views.Index.as_view(), name='charades.index'),
+    url(r'^word/(?P<category_id>\d+)?/?', views.Word.as_view(), name='pictionary.word'),
+    url(r'^$', views.Index.as_view(), name='pictionary.index'),
 ]
