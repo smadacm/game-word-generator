@@ -10,22 +10,22 @@ from Charades import models as c_models
 from Pictionary import models as p_models
 
 def import_words(category_name, file_name, cat_cls, word_cls):
-    print('importing category "%s"...'%(category_name,), end='')
+    print 'importing category "%s"...'%(category_name,),
     category = cat_cls()
     category.name = category_name
     category.save()
-    print('done')
+    print 'done'
 
     f = open(os.path.dirname(__file__) + '/' + file_name)
     words = f.read().split('\n')
     for w in words:
         if not w.strip(): continue
-        print('    importing word "%s"...'%(w,), end='')
+        print '    importing word "%s"...'%(w,),
         word = word_cls()
         word.category = category
         word.word = w
         word.save()
-        print('done')
+        print 'done'
 
 def import_charade_words(category_name, file_name):
     import_words(category_name, file_name, c_models.Category, c_models.Word)
